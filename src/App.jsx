@@ -83,7 +83,7 @@ async function askClaude(system, userMsg, history = []) {
 
     // Direct call for local/StackBlitz dev
     if (_apiProvider === "groq") {
-      const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+      const res = await fetch("/api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
